@@ -1,0 +1,33 @@
+{
+    "name": "pmsipilot/docker-compose-viz",
+    "description": "Docker compose graph visualization",
+    "require": {
+        "php": "^7.2",
+        "symfony/yaml": "^3.1 || ^4",
+        "symfony/console": "^3.1",
+        "clue/graph": "^0.9",
+        "graphp/graphviz": "^0.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2",
+        "kahlan/kahlan": "^4.7"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Julien Bianchi",
+            "email": "julien.bianchi@pmsipilot.com"
+        }
+    ],
+    "autoload": {
+        "files": ["src/functions.php"],
+        "psr-4": {
+            "PMSIpilot\\DockerComposeViz\\": "src/"
+        }
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix",
+        "cst": "php-cs-fixer fix --dry-run",
+        "ut": "kahlan --grep='*.php' --reporter=verbose --persistent=false"
+    }
+}
